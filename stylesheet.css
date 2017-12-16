@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Nickainley-Normal';
+    src:url('Nickainley-Normal.ttf.woff') format('woff'),
+        url('Nickainley-Normal.ttf.svg#Nickainley-Normal') format('svg'),
+        url('Nickainley-Normal.ttf.eot'),
+        url('Nickainley-Normal.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+font-family: font-family: 'Lora', serif;
+}
+
+h1 { 
+   font-family: 'Nickainley-Normal';
+}  
+
+header { 
+display: block; 
+margin: auto; 
+width: 100%;
+height: 140px;
+overflow: hidden;
+background-color: #ffffff; 
+margin-top: -10px;
+position: fixed;
+/*top: 0px; */
+}
+
+.logo { 
+margin-left: 55px; 
+width: 20%; 
+display: inline-block;
+/*position: fixed; */
+float: left; 
+left: 0;
+margin-top: 5px; 
+}
+
+nav ul li a { 
+text-decoration: none; 
+font-size: 20px; 
+padding: 13px; 
+font-family: 'Nickainley-Normal'; 
+color: black; 
+float: left;
+}
+
+li:hover { 
+border-bottom: 4px solid #522B85; 
+}
+
+ul li { 
+display: block; 
+float: left; 
+padding: 15px;
+}
+
+nav ul { 
+position: fixed; 
+right: 0;
+}
+
+nav { 
+width:45%;
+display: inline;
+margin-right: 30px; 
+float: right;
+right:0;
+/*position: fixed; */
+margin-top: 20px; 
+background-color: #ffffff;
+}
+
+.container { 
+width: 100%; 
+display: block; 
+margin: auto; 
+}
+
+#history { 
+width: 60%; 
+margin: auto; 
+display: block; 
+padding-top: 150px;
+}
+
+#history h1 { 
+font-family: 'Nickainley-Normal';
+font-size: 35px;
+text-align: center; 
+}
+
+#funfacts h2 { 
+font-family: 'Nickainley-Normal';
+font-size: 28px;
+text-align: center; 
+margin-top: 80px;
+}
+
+#history p { 
+font-family: 'Lora';
+font-size: 14px;
+text-align: center; 
+}
+
+#location {
+padding-top: 160px; 
+width: 100%; 
+margin: auto; 
+text-align: center; 
+display: inline-block;
+}
+
+#location p { 
+font-size: 32px; 
+width: 100%;
+margin:auto; 
+display: block;
+}
+
+.descriptiontext { 
+font-family: 'Nickainley-Normal';
+margin:auto; 
+padding-top: 10px;
+}
+
+#distance-measurement { 
+font-family: 'Lora';
+font-size: 20px;
+padding-top: 10px;
+}
+#distance-measurement:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.descriptiontext:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.coolplace { 
+width: 90%; 
+margin-top: 30px; 
+padding-left: 20px; 
+display: block; 
+float: left;  
+font-family: 'Lora';
+}
+
+.cpimg { 
+width: 40%; 
+display: inline; 
+float: left; 
+}
+
+#coolplacetitle { 
+padding-top: 150px; 
+width: 30%; 
+margin: auto; 
+text-align: center; 
+font-family: 'Nickainley-Normal';
+}
+
+.cpdescription { 
+width: 50%; 
+float: left; 
+display: inline; 
+}

@@ -1,0 +1,78 @@
+<html> 
+<head> <title>An Ode to Minnesota Home </title>
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head> 
+
+<body>
+<header> 
+<img class="logo" src="minnesotalogo-03.png"/>
+<nav>
+<ul>
+	
+	<li><a href="index.html">Home</a> </li>
+	<li><a href="about.html">About</a> </li>
+	<li><a href="coolplaces.html">Cool Places</a> </li>
+</ul>
+ </nav>
+</header>
+
+<div class="container">
+<section id="location"> 
+<article class="firstline">
+<p class="descriptiontext">You are currently <p><p id="distance-measurement"></p> 
+<p class="descriptiontext">from Minneapolis, Minnesota. </p> <p class="descriptiontext">How unfortunate for you! </p>
+
+</section>
+
+</div> 
+</body> 
+<!--link to the Google Maps API using your API key and initialize the function initMap-->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQv6JoyTG8cPKAo3gwMzBvDgWnhSajna0&callback=initMap">
+</script>
+
+<script>
+function initMap() {
+    if ("geolocation" in navigator) {
+        /* geolocation is available */
+    console.log("geolocation is available");
+    navigator.geolocation.getCurrentPosition(function(position) {
+    //pass the latitude and longitude to a function called myFunction
+        returnDist(position.coords.latitude, position.coords.longitude);
+        });
+    } else {
+    //if no geolocation is available, use the equator lat-lon coordinates
+        console.log("no geolocation");
+    }
+    function returnDist(lat1, lon1){ 
+        var origin1 = '{' + '"lat": ' + lat1 + ', "lng": ' + lon1 + '}';
+        var originParsed = JSON.parse(origin1);
+        var destination1 = {lat: 44.986656, lng: -93.258133};
+        console.log(origin1);      
+        var geocoder = new google.maps.Geocoder;  
+        var service = new google.maps.DistanceMatrixService;
+        //service takes inputs -- use variable for origin from user's geolocation
+        service.getDistanceMatrix({
+            origins: [originParsed],
+            destinations: [destination1],
+            travelMode: 'DRIVING',
+            unitSystem: google.maps.UnitSystem.METRIC,
+            avoidHighways: false,
+            avoidTolls: false
+        }, function(response, status) {
+          if (status !== 'OK') {
+            alert('Error was: ' + status);
+          } else {
+            console.log(response);
+            console.log(response['rows'][0]['elements'][0]['distance']['text']);
+            var textDistance = response['rows'][0]['elements'][0]['distance']['text'];
+            $('#distance-measurement').text(textDistance);
+            }
+        });
+    }
+}
+</script>
+</html> 
+
