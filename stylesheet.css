@@ -148,11 +148,12 @@ margin-top: 30px;
 padding-left: 20px; 
 display: block; 
 float: left;  
+margin: auto;
 font-family: 'Lora';
 }
 
 .cpimg { 
-width: 40%; 
+width: 35%; 
 display: inline; 
 float: left; 
 }
@@ -169,4 +170,18 @@ font-family: 'Nickainley-Normal';
 width: 50%; 
 float: left; 
 display: inline; 
+padding-right: 10px;
+}
+
+.map { 
+margin: auto; 
+width: 40%; 
+display: block;
+padding-top: 10px; 
+padding-bottom: 10px; 
+}
+.pins { 
+width: 8%; 
+display: inline; 
+float: left; 
 }
